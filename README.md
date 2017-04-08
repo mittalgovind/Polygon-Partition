@@ -13,12 +13,12 @@ A Rectillinear polygon consisting of 20 vertices.
 Pressing a key once means going forward, left, or right. A distance of only one unit can be traversed at a time.
 
 #### INPUTS 
-**_G_** = Rectilinear Graph 
-**_X_** = Set of Abscissa of vertices
-**_Y_** = Set of Ordinates of vertices
-**_Collinear\_Vertices_** = Set of Collinear Vertices 
-**_Concave\_Vertices_** = Set of Concave Vertices
-**_Horizontal\_Chords_** = Set of Horizontal Chords
+**_G_** = Rectilinear Graph \
+**_X_** = Set of Abscissa of vertices \
+**_Y_** = Set of Ordinates of vertices \
+**_Collinear\_Vertices_** = Set of Collinear Vertices \
+**_Concave\_Vertices_** = Set of Concave Vertices \
+**_Horizontal\_Chords_** = Set of Horizontal Chords \
 **_Vertical\_Chords_** = Set of Vertical Chords
 
 #### Important points to note
@@ -64,11 +64,11 @@ max_partition(G):
 *Vertical\_Chords*  =  [(v<sub>7</sub>, v<sub>12</sub>)]
 
 <u>*Explanation*</u>:
-**u > v :** Comparison between two vertices is done on the basis of their respective vertex indices[^3].
-Here **_v-u_** should be greater than unity, because this assures the vertex v is not consecutive to u and has a higher index than u. Thus, iteration through each pair of vertex is done only once, making it more efficient.
+**u > v :** Comparison between two vertices is done on the basis of their respective vertex indices. \
+Here **_v-u_** should be greater than unity, because this assures the vertex v is not consecutive to u and has a higher index than u. Thus, iteration through each pair of vertex is done only once, making it more efficient. \
 
-In the above code, we iterate through all (concave vertex, concave vertex') pairs, and check for existence of vertical and horizontal chords, that are not intersected by any other vertex.
-We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave vertices and between whom, there exists a vertical chord. Therefore, it is added to the set of *Vertical\_Chords*. Also, there does not exist any horizontal chord between any two concave vertices and therefore, set of *Horizontal\_Chords* is empty.
+In the above code, we iterate through all (concave vertex, concave vertex') pairs, and check for existence of vertical and horizontal chords, that are not intersected by any other vertex. \
+We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave vertices and between whom, there exists a vertical chord. Therefore, it is added to the set of *Vertical\_Chords*. Also, there does not exist any horizontal chord between any two concave vertices and therefore, set of *Horizontal\_Chords* is empty. \
 
 ##### STEP II
 
@@ -85,19 +85,16 @@ We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave verti
                 loop_back
 ```
 
-**_Task Achieved:_** All the chords between *collinear vertices and concave vertices* are being added to their *respective categories*.
+**_Task Achieved:_** All the chords between *collinear vertices and concave vertices* are being added to their *respective categories*. \
 
-<br><br><br><br>
-<br><br>
-**_Example: _** <br>
+**EXAMPLE** \
 <img width="372" alt="pic2" src="https://cloud.githubusercontent.com/assets/10897608/24832578/3fff5aae-1cd0-11e7-9773-45f3f7a7b13e.png">
+*Horizontal\_Chords* =  [(v<sub>9</sub>, v<sub>12</sub>), (v<sub>17</sub>, v<sub>14</sub>), (v<sub>18</sub>, v<sub>7</sub>), (v<sub>19</sub>, v<sub>6</sub>)] \
+*Vertical_Chords* =  [(v<sub>7</sub>, v<sub>12</sub>), (v<sub>1</sub>, v<sub>4</sub>), (v<sub>3</sub>, v<sub>6</sub>)] \
 
-*Horizontal\_Chords* =  [(v<sub>9</sub>, v<sub>12</sub>), (v<sub>17</sub>, v<sub>14</sub>), (v<sub>18</sub>, v<sub>7</sub>), (v<sub>19</sub>, v<sub>6</sub>)]
-*Vertical_Chords* =  [(v<sub>7</sub>, v<sub>12</sub>), (v<sub>1</sub>, v<sub>4</sub>), (v<sub>3</sub>, v<sub>6</sub>)]
-<!-- label the graphs -->
 <u>*Explanation*</u>:
-In the above code, we iterate through all (collinear vertex, concave vertex) pairs, and check for existence of vertical and horizontal chords between them, that are not intersected by any other vertex.
-If any chord is found, it is added to set of *Vertical\_Chords* or *Horizontal\_Chords*, depending on its orientation.
+In the above code, we iterate through all (collinear vertex, concave vertex) pairs, and check for existence of vertical and horizontal chords between them, that are not intersected by any other vertex. \
+If any chord is found, it is added to set of *Vertical\_Chords* or *Horizontal\_Chords*, depending on its orientation. \
 
 ##### STEP III
 
