@@ -141,6 +141,7 @@ Thus, we have found all the chords, and only need to plot them now.
 *Test Case 3*
 <img width="451" alt="test 3 2" src="https://cloud.githubusercontent.com/assets/10897608/24833012/2a350826-1cdb-11e7-979c-c055d5d31925.png">
 <img width="1143" alt="test 3 1" src="https://cloud.githubusercontent.com/assets/10897608/24833015/2a8400b6-1cdb-11e7-8638-f14d2143cbb6.png">
+<br>
 
 *Test Case 4*
 <img width="1143" alt="test 4 1" src="https://cloud.githubusercontent.com/assets/10897608/24833014/2a754e7c-1cdb-11e7-8165-e47d3a6e8dc0.png">
