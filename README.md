@@ -10,19 +10,16 @@ We take input as a rectillinear polygon from cursor keys, i.e., up(↑), left(�
 
 A Rectillinear polygon consisting of 20 vertices.
 
-Pressing a key once means going forward, left[^-1], or right[^-1]. A distance of only one unit can be traversed at a time.
+Pressing a key once means going forward, left, or right. A distance of only one unit can be traversed at a time.
 
----
 #### INPUTS 
-
- **_G_** = Rectilinear Graph \
- **_X_** = Set of Abscissa of vertices\
- **_Y_** = Set of Ordinates of vertices\
- **_Collinear\_Vertices_** = Set of Collinear Vertices[^0] \
- **_Concave\_Vertices_** = Set of Concave Vertices[^1]\
- **_Horizontal\_Chords_** = Set of Horizontal Chords[^2]\
- **_Vertical\_Chords_** = Set of Vertical Chords[^2]
----
+**_G_** = Rectilinear Graph 
+**_X_** = Set of Abscissa of vertices
+**_Y_** = Set of Ordinates of vertices
+**_Collinear\_Vertices_** = Set of Collinear Vertices 
+**_Concave\_Vertices_** = Set of Concave Vertices
+**_Horizontal\_Chords_** = Set of Horizontal Chords
+**_Vertical\_Chords_** = Set of Vertical Chords
 
 #### Important points to note
 
@@ -31,13 +28,12 @@ Pressing a key once means going forward, left[^-1], or right[^-1]. A distance of
     3. If the interior angle made by the two edges incident at this vertex is 270 degree.
     4. Chords are lines joining two vertices which are not already part of the polygon.
     5. As, the way of labelling is defined, there is unique labelling of each rectillinear polygon.
-
-<br><br><br>
+    
 **EXAMPLE** \
-In the above figure, the pointer is shown by an arrow.
-Total number of vertices = 20
+In the above figure, the pointer is shown by an arrow. \
+Total number of vertices = 20 \
 Collinear\_Vertices = [v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>9</sub>, v<sub>13</sub>, v<sub>17</sub>, v<sub>18</sub>, v<sub>19</sub>]
-Concave\_Vertices = [v<sub>6</sub>, v<sub>7</sub>, v<sub>12</sub>, v<sub>14</sub>]
+Concave\_Vertices = [v<sub>6</sub>, v<sub>7</sub>, v<sub>12</sub>, v<sub>14</sub>] 
 
 ### _**Algorithm for Finding Maximum partitions**_
 
@@ -59,11 +55,12 @@ max_partition(G):
                 loop_back
 ```
 
-**_Task Achieved:_** All the edges that exist between *any two concave vertices* are being added to their *respectful categories*.
-**_Example: _** <br>
+**_Task Achieved:_** All the edges that exist between *any two concave vertices* are being added to their *respectful categories*. \
+
+**EXAMPLE** \
 <img width="371" alt="pic1" src="https://cloud.githubusercontent.com/assets/10897608/24832577/3ffd78b0-1cd0-11e7-90b2-0c13c1642edd.png">
 
-*Horizontal\_Chords* =  ∅
+*Horizontal\_Chords* =  ∅ \
 *Vertical\_Chords*  =  [(v<sub>7</sub>, v<sub>12</sub>)]
 
 <u>*Explanation*</u>:
