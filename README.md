@@ -107,3 +107,26 @@ Thus, we have found all the chords, and only need to plot them now.
     plot(Vertical_Chords)
     display(plot)
 ```
+
+<img width="453" alt="test 0 2" src="https://cloud.githubusercontent.com/assets/10897608/24833013/2a39aaca-1cdb-11e7-996a-b8e17434e740.png">
+
+##### STEP IV
+
+Now we have found the maximum partition, but to find the minimum partition the following needs to be done
+
+    1. Find a maximum independent set of chords (i.e., a maximum cardinality set of independent chords).
+    2. Draw the chords in this maximum independent set. This partitions the polygon into smaller rectilinear polygons.
+    
+##### STEP V
+From each of the concave vertices from which a chord was not drawn in *Step IV* draw a maximum length vertical line that is wholly within the smaller rectilinear polygon created in *Step III* that contains this vertex.
+
+##### STEP VI
+
+Thus, we have found all the chords, and only need to plot them now.
+```python
+    plot(X,Y)
+    plot(Horizontal_Chords)
+    plot(Vertical_Chords)
+    plot(Nearest_Partial_Chords)
+    display(plot)
+```
