@@ -13,8 +13,7 @@ A Rectillinear polygon consisting of 20 vertices.
 Pressing a key once means going forward, left[^-1], or right[^-1]. A distance of only one unit can be traversed at a time.
 
 ---
-
-<h3>INPUTS </h3> \
+#### INPUTS 
 
  **_G_** = Rectilinear Graph \
  **_X_** = Set of Abscissa of vertices\
@@ -25,13 +24,13 @@ Pressing a key once means going forward, left[^-1], or right[^-1]. A distance of
  **_Vertical\_Chords_** = Set of Vertical Chords[^2]
 ---
 
-<h3> Important points to note </h3>
+#### Important points to note
 
-Left and Right operations changes the direction the pointer faces.
-Vertices that are induced after going forward consecutively. Although in the example, they are not explicitly shown, but they do exist and at a distance of one unit from its previous vertex.
-If the interior angle made by the two edges incident at this vertex is 270 degree.
-Chords are lines joining two vertices which are not already part of the polygon.
-As, the way of labelling is defined, there is unique labelling of each rectillinear polygon.
+    1. Left and Right operations changes the direction the pointer faces.
+    2. Vertices that are induced after going forward consecutively. Although in the example, they are not explicitly shown,               but they do exist and at a distance of one unit from its previous vertex.
+    3. If the interior angle made by the two edges incident at this vertex is 270 degree.
+    4. Chords are lines joining two vertices which are not already part of the polygon.
+    5. As, the way of labelling is defined, there is unique labelling of each rectillinear polygon.
 
 <br><br><br>
 **EXAMPLE** \
@@ -40,11 +39,11 @@ Total number of vertices = 20
 Collinear\_Vertices = [v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>9</sub>, v<sub>13</sub>, v<sub>17</sub>, v<sub>18</sub>, v<sub>19</sub>]
 Concave\_Vertices = [v<sub>6</sub>, v<sub>7</sub>, v<sub>12</sub>, v<sub>14</sub>]
 
-###_**Algorithm for Finding Maximum partitions**_
+### _**Algorithm for Finding Maximum partitions**_
 
 **Maximum Partition:** Partition of given rectillinear polygon into maximum number of non-overlapping rectangles.
 
-#####STEP I
+##### STEP I
 
 ```python
 max_partition(G):
@@ -62,9 +61,8 @@ max_partition(G):
 
 **_Task Achieved:_** All the edges that exist between *any two concave vertices* are being added to their *respectful categories*.
 **_Example: _** <br>
-<img src="pic1.png" width="250" height="200" align="left"/>
-<br><br><br><br>
-<br><br>
+<img width="371" alt="pic1" src="https://cloud.githubusercontent.com/assets/10897608/24832577/3ffd78b0-1cd0-11e7-90b2-0c13c1642edd.png">
+
 *Horizontal\_Chords* =  ∅
 *Vertical\_Chords*  =  [(v<sub>7</sub>, v<sub>12</sub>)]
 
@@ -75,7 +73,7 @@ Here **_v-u_** should be greater than unity, because this assures the vertex v i
 In the above code, we iterate through all (concave vertex, concave vertex') pairs, and check for existence of vertical and horizontal chords, that are not intersected by any other vertex.
 We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave vertices and between whom, there exists a vertical chord. Therefore, it is added to the set of *Vertical\_Chords*. Also, there does not exist any horizontal chord between any two concave vertices and therefore, set of *Horizontal\_Chords* is empty.
 
-#####STEP II
+##### STEP II
 
 ```python
     for u in Collinear_Vertices:
@@ -95,7 +93,8 @@ We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave verti
 <br><br><br><br>
 <br><br>
 **_Example: _** <br>
-<img src="pic2.png" width="250" height="200" align="left"/>
+<img width="372" alt="pic2" src="https://cloud.githubusercontent.com/assets/10897608/24832578/3fff5aae-1cd0-11e7-9773-45f3f7a7b13e.png">
+
 *Horizontal\_Chords* =  [(v<sub>9</sub>, v<sub>12</sub>), (v<sub>17</sub>, v<sub>14</sub>), (v<sub>18</sub>, v<sub>7</sub>), (v<sub>19</sub>, v<sub>6</sub>)]
 *Vertical_Chords* =  [(v<sub>7</sub>, v<sub>12</sub>), (v<sub>1</sub>, v<sub>4</sub>), (v<sub>3</sub>, v<sub>6</sub>)]
 <!-- label the graphs -->
@@ -103,7 +102,7 @@ We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave verti
 In the above code, we iterate through all (collinear vertex, concave vertex) pairs, and check for existence of vertical and horizontal chords between them, that are not intersected by any other vertex.
 If any chord is found, it is added to set of *Vertical\_Chords* or *Horizontal\_Chords*, depending on its orientation.
 
-#####STEP III
+##### STEP III
 
 Thus, we have found all the chords, and only need to plot them now.
 ```python
