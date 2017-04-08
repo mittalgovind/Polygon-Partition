@@ -130,3 +130,20 @@ Thus, we have found all the chords, and only need to plot them now.
     plot(Nearest_Partial_Chords)
     display(plot)
 ```
+*Test Case 1*
+<img width="1036" alt="test1 1" src="https://cloud.githubusercontent.com/assets/10897608/24833019/2b0da550-1cdb-11e7-9509-3612cd8242de.png">
+<img width="436" alt="test 1 2" src="https://cloud.githubusercontent.com/assets/10897608/24833011/2a33018e-1cdb-11e7-8434-c1b139ce9ba6.png">
+
+*Test Case 2*
+<img width="1149" alt="test 2 1" src="https://cloud.githubusercontent.com/assets/10897608/24833018/2aff3718-1cdb-11e7-9f82-9cde84f4d3f0.png">
+<img width="455" alt="test 2 2" src="https://cloud.githubusercontent.com/assets/10897608/24833017/2ac37746-1cdb-11e7-96d6-25488803f9dd.png">
+
+*Test Case 3*
+<img width="451" alt="test 3 2" src="https://cloud.githubusercontent.com/assets/10897608/24833012/2a350826-1cdb-11e7-979c-c055d5d31925.png">
+<img width="1143" alt="test 3 1" src="https://cloud.githubusercontent.com/assets/10897608/24833015/2a8400b6-1cdb-11e7-8638-f14d2143cbb6.png">
+
+*Test Case 4*
+<img width="1143" alt="test 4 1" src="https://cloud.githubusercontent.com/assets/10897608/24833014/2a754e7c-1cdb-11e7-8165-e47d3a6e8dc0.png">
+<img width="436" alt="test 4 2" src="https://cloud.githubusercontent.com/assets/10897608/24833020/2bf6f584-1cdb-11e7-97fa-5ab28250495b.png">
+
+
