@@ -85,12 +85,14 @@ We observe that, v<sub>7</sub> and v<sub>12</sub> are the only two concave verti
                 loop_back
 ```
 
-**_Task Achieved:_** All the chords between *collinear vertices and concave vertices* are being added to their *respective categories*. \
+**_Task Achieved:_** All the chords between *collinear vertices and concave vertices* are being added to their *respective categories*. 
 
-**EXAMPLE** \
+**EXAMPLE** 
+
 <img width="372" alt="pic2" src="https://cloud.githubusercontent.com/assets/10897608/24832578/3fff5aae-1cd0-11e7-9773-45f3f7a7b13e.png">
+
 *Horizontal\_Chords* =  [(v<sub>9</sub>, v<sub>12</sub>), (v<sub>17</sub>, v<sub>14</sub>), (v<sub>18</sub>, v<sub>7</sub>), (v<sub>19</sub>, v<sub>6</sub>)] \
-*Vertical_Chords* =  [(v<sub>7</sub>, v<sub>12</sub>), (v<sub>1</sub>, v<sub>4</sub>), (v<sub>3</sub>, v<sub>6</sub>)] \
+*Vertical_Chords* =  [(v<sub>7</sub>, v<sub>12</sub>), (v<sub>1</sub>, v<sub>4</sub>), (v<sub>3</sub>, v<sub>6</sub>)] 
 
 <u>*Explanation*</u>:
 In the above code, we iterate through all (collinear vertex, concave vertex) pairs, and check for existence of vertical and horizontal chords between them, that are not intersected by any other vertex. \
