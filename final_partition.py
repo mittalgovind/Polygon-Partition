@@ -218,6 +218,13 @@ def compute_partition(p):
             if x1 <= x3 and x3 <=x2 and y3 <= y1 and y1 <= y4:    
                 G.add_edge(i, j + len(horizontal_chords))
     
+    if len(horizontal_chords) == 0:
+        for j,v in enumerate(vertical_chords):
+            x3 = x[v[0]]
+            y3 = min(y[v[0]],y[v[1]])
+            y4 = max(y[v[0]],y[v[1]])
+            G.add_node(j,bipartite=0)
+    
     # finding the maximum matching of the bipartite graph, G.
     M = nx.Graph()
     maximum_matching = nx.bipartite.maximum_matching(G)
@@ -298,7 +305,7 @@ def compute_partition(p):
                 temp1, temp2 = horizontal_chords[j]
                 if abs(y[i] - y[temp1]) < nearest_distance and \
                 (x[i] <= x[temp1] and x[i] >= x[temp2] or x[i] >= x[temp1] and x[i] <= x[temp2]) \
-                and abs(temp1 - i) != 1 and abs(temp2 - i):
+                and abs(temp1 - i) != 1 and abs(temp2 - i) != 1:
                     middles = []
                     for u in range(len(x)):
                         if x[i] == x[u] and (y[i] < y[u] and y[u] < y[temp1] or y[temp1] < y[u] and y[u] < y[i]):
@@ -341,5 +348,4 @@ wn.onkey(back, "Down")
 wn.onkey(partition_polygon, "Escape")
 wn.listen()
 wn.mainloop()
-
 
