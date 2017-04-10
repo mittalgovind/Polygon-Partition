@@ -103,46 +103,42 @@ def compute_partition(p):
             if concave_vertices[j] != concave_vertices[i] + 1:
                 middles = []
                 if y[concave_vertices[i]] == y[concave_vertices[j]]:
-                    for k in range(concave_vertices[i], concave_vertices[j]):
-                        if y[concave_vertices[i]] == y[k] and \
-                           (x[concave_vertices[i]] < x[k] and x[concave_vertices[j]] > x[k] \
-                           or x[concave_vertices[i]] > x[k] and x[concave_vertices[j]] < x[k]):
+                    for k in range(len(x)):
+                        if y[concave_vertices[i]] == y[k] and (x[concave_vertices[i]] < x[k] and x[concave_vertices[j]] > x[k] \
+                                                              or x[concave_vertices[i]] > x[k] and x[concave_vertices[j]] < x[k]):
                             middles.append(k)
                     if len(middles) == 0:
                         horizontal_chords.append((concave_vertices[i],concave_vertices[j]))
                 middles = []
                 if x[concave_vertices[i]] == x[concave_vertices[j]]:
-                    for k in range(concave_vertices[i], concave_vertices[j]):
-                        if x[concave_vertices[i]] == x[k] and \
-                           (y[concave_vertices[i]] < y[k] and y[concave_vertices[j]] > y[k] \
-                           or y[concave_vertices[i]] > y[k] and y[concave_vertices[j]] < y[k]):
+                    for k in range(len(x)):
+                        if x[concave_vertices[i]] == x[k] and (y[concave_vertices[i]] < y[k] and y[concave_vertices[j]] > y[k] \
+                                                              or y[concave_vertices[i]] > y[k] and y[concave_vertices[j]] < y[k]):
                             middles.append(k)
                     if len(middles) == 0:
                         vertical_chords.append((concave_vertices[i],concave_vertices[j]))
-    
-    # temporary variables to store current value of the two variables.
-    # to be used again in the minimum partition part.
+            
+
     temp_hori = horizontal_chords[:]
     temp_verti = vertical_chords[:]
-    # CODE THAT MAKES IT MAXIMUM PARTITION
-    # finding the vertical or horizontal chords between a colliinear vertex and concave vertices 
+
     for i in range(len(collinear_vertices)):
         for j in range(len(concave_vertices)):
             middles = []
             if y[collinear_vertices[i]] == y[concave_vertices[j]]:
                 if collinear_vertices[i] < concave_vertices[j]:
-                    for k in range(collinear_vertices[i]+1, concave_vertices[j]):
-                        if y[k] == y[collinear_vertices[i]] and (x[k] <= x[concave_vertices[j]] \
-                            and x[k] >= x[collinear_vertices[i]] or x[k] >= x[concave_vertices[j]] \
-                            and x[k] <= x[collinear_vertices[i]]):
+                    for k in range(len(x)):
+                        if y[k] == y[collinear_vertices[i]] and (x[k] < x[concave_vertices[j]] \
+                            and x[k] > x[collinear_vertices[i]] or x[k] > x[concave_vertices[j]] \
+                            and x[k] < x[collinear_vertices[i]]):
                             middles.append(k)
                     if collinear_vertices[i]+1 == concave_vertices[j]:
                         middles.append(0)
                 else:
-                    for k in range(concave_vertices[j]+1, collinear_vertices[i]):
-                        if y[k] == y[collinear_vertices[i]] and (x[k] >= x[concave_vertices[j]] \
-                            and x[k] <= x[collinear_vertices[i]] or x[k] <= x[concave_vertices[j]] \
-                            and x[k] >= x[collinear_vertices[i]]):
+                    for k in range(len(x)):
+                        if y[k] == y[collinear_vertices[i]] and (x[k] > x[concave_vertices[j]] \
+                            and x[k] < x[collinear_vertices[i]] or x[k] < x[concave_vertices[j]] \
+                            and x[k] > x[collinear_vertices[i]]):
                             middles.append(k)
                     if collinear_vertices[i] == concave_vertices[j]+1:
                         middles.append(0)
@@ -151,24 +147,23 @@ def compute_partition(p):
             middles = []
             if x[collinear_vertices[i]] == x[concave_vertices[j]]:
                 if collinear_vertices[i] < concave_vertices[j]:
-                    for k in range(collinear_vertices[i]+1, concave_vertices[j]):
-                        if x[k] == x[collinear_vertices[i]] and (y[k] <= y[concave_vertices[j]] \
-                            and y[k] >= y[collinear_vertices[i]] or y[k] >= y[concave_vertices[j]] \
-                            and y[k] <= y[collinear_vertices[i]]):
+                    for k in range(len(x)):
+                        if x[k] == x[collinear_vertices[i]] and (y[k] < y[concave_vertices[j]] \
+                            and y[k] > y[collinear_vertices[i]] or y[k] > y[concave_vertices[j]] \
+                            and y[k] < y[collinear_vertices[i]]):
                             middles.append(k)
                     if collinear_vertices[i]+1 == concave_vertices[j]:
                         middles.append(0)
                 else:
-                    for k in range(concave_vertices[j]+1, collinear_vertices[i]):
-                        if x[k] == x[collinear_vertices[i]] and (y[k] >= y[concave_vertices[j]] \
-                            and y[k] <= y[collinear_vertices[i]] or y[k] <= y[concave_vertices[j]] \
-                            and y[k] >= y[collinear_vertices[i]]):
+                    for k in range(len(x)):
+                        if x[k] == x[collinear_vertices[i]] and (y[k] > y[concave_vertices[j]] \
+                            and y[k] < y[collinear_vertices[i]] or y[k] < y[concave_vertices[j]] \
+                            and y[k] > y[collinear_vertices[i]]):
                             middles.append(k)
                     if collinear_vertices[i] == concave_vertices[j]+1:
                         middles.append(0)
                 if len(middles) == 0:
-                    vertical_chords.append((collinear_vertices[i],concave_vertices[j]))
-    
+                    vertical_chords.append((collinear_vertices[i],concave_vertices[j]))    
     # displaying all attributes and important parameters involved
     # plotting the initial input given
     print ("Initial input rectillinear graph")
@@ -209,12 +204,12 @@ def compute_partition(p):
         y1 = y[h[0]]
         x1 = min(x[h[0]] ,x[h[1]] )
         x2 = max(x[h[0]] ,x[h[1]])
-        G.add_node(i, bipartite=0)
+        G.add_node(i, bipartite=1)
         for j,v in enumerate(vertical_chords):
             x3 = x[v[0]]
             y3 = min(y[v[0]],y[v[1]])
             y4 = max(y[v[0]],y[v[1]])
-            G.add_node(j + len(horizontal_chords),bipartite=1)
+            G.add_node(j + len(horizontal_chords),bipartite=0)
             if x1 <= x3 and x3 <=x2 and y3 <= y1 and y1 <= y4:    
                 G.add_edge(i, j + len(horizontal_chords))
     
@@ -231,14 +226,11 @@ def compute_partition(p):
     maximum_matching_list = []
     for i,j in maximum_matching.items():
         maximum_matching_list += [(i,j)]
-        # this is done because the maximum matching returned from \
-        # networkx library is dictionary format containing duplicates \
-        # this procedure removes any duplictes.
     M.add_edges_from(maximum_matching_list)
     maximum_matching = M.edges()
+    # breaking up into two sets
     H, V = bipartite.sets(G)
-    # finding vertices that are isolated 
-    free_vertices = [] 
+    free_vertices = []
     for u in H:
         temp = []
         for v in V:
@@ -253,9 +245,8 @@ def compute_partition(p):
                 temp += [v]
         if len(temp) == 0:
             free_vertices += [u]
-
+            
     # finding the maximum independent set
-    # refer attached research paper for more explanation
     max_independent = []
     while len(free_vertices) != 0 or len(maximum_matching) != 0:
         if len(free_vertices) != 0 :
@@ -277,25 +268,20 @@ def compute_partition(p):
                     free_vertices += [h]
 
     
-    # drawing the minimum partitioned polygon 
+    # drawing the partitioned polygon 
     independent_chords = []
     for i in max_independent:
         if (i >= len(horizontal_chords)):
             independent_chords += [vertical_chords[i-len(horizontal_chords)]]
         else:
             independent_chords += [horizontal_chords[i]]
-
-    # finding the set of concave vertices that has not been part 
-    # of the maximum independent set.
     unmatched_concave_vertices = [i for i in concave_vertices]
     for i,j in independent_chords:
         if i in unmatched_concave_vertices:
             unmatched_concave_vertices.remove(i)
         if j in unmatched_concave_vertices:
             unmatched_concave_vertices.remove(j)
-
-    # finding the nearest distance of any horizontal chord or collinear vertex,
-    # for drawing a partial chord so as to complete the last step of the algorithm.
+    
     nearest_chord = []
     for i in unmatched_concave_vertices:
         dist = 0
@@ -327,8 +313,8 @@ def compute_partition(p):
                         nearest_distance = abs(y[i] - y[k])
                         dist = y[k] - y[i]
             nearest_chord.append((i,dist)) 
-
-    print("The mimumum partitioned rectillinear polygon")
+     
+    print("The minimum partitioned rectillinear polygon")
     fig, ax = plt.subplots()
     ax.plot(x+[0], y+[0], color='black')
     ax.scatter(x+[0], y+[0], color='black')
