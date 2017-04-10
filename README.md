@@ -135,13 +135,12 @@ Thus, we have found all the chords, and only need to plot them now.
 <img width="436" alt="test 1 2" src="https://cloud.githubusercontent.com/assets/10897608/24833011/2a33018e-1cdb-11e7-8434-c1b139ce9ba6.png">
 
 *Test Case 2*
-<img width="1149" alt="test 2 1" src="https://cloud.githubusercontent.com/assets/10897608/24833018/2aff3718-1cdb-11e7-9f82-9cde84f4d3f0.png">
-<img width="455" alt="test 2 2" src="https://cloud.githubusercontent.com/assets/10897608/24833017/2ac37746-1cdb-11e7-96d6-25488803f9dd.png">
+<img width="946" alt="2 1" src="https://cloud.githubusercontent.com/assets/10897608/24852833/95c4592c-1df6-11e7-8531-70f41ddf4ad5.png">
+<img width="434" alt="2 2" src="https://cloud.githubusercontent.com/assets/10897608/24852837/9719ae30-1df6-11e7-860b-69a3e27f8b4f.png">
 
 *Test Case 3*
-<img width="451" alt="test 3 2" src="https://cloud.githubusercontent.com/assets/10897608/24833012/2a350826-1cdb-11e7-979c-c055d5d31925.png">
-<img width="1143" alt="test 3 1" src="https://cloud.githubusercontent.com/assets/10897608/24833015/2a8400b6-1cdb-11e7-8638-f14d2143cbb6.png">
-<br>
+<img width="1142" alt="3 1" src="https://cloud.githubusercontent.com/assets/10897608/24852836/970f5160-1df6-11e7-915c-20c4c29c541a.png">
+<img width="436" alt="3 2" src="https://cloud.githubusercontent.com/assets/10897608/24852834/96ef7426-1df6-11e7-9b7c-004534daa173.png">
 
 *Test Case 4*
 <img width="1143" alt="test 4 1" src="https://cloud.githubusercontent.com/assets/10897608/24833014/2a754e7c-1cdb-11e7-8165-e47d3a6e8dc0.png">
