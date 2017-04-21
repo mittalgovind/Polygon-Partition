@@ -1,8 +1,0 @@
-PWD /Users/govindmittal/Downloads/untitled
-INPUT /usr/local/texlive/2016/texmf.cnf
-INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT variables.tex
-OUTPUT variables.log
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
