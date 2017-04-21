@@ -1,0 +1,51 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{i}{dummy.1}
+\defcounter {refsection}{0}\relax 
+\vspace {1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{ii}{dummy.2}
+\defcounter {refsection}{0}\relax 
+\vspace {1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Contents}{iii}{dummy.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{iv}{dummy.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Definitions}{3}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}The Algorithm}{5}{chapter.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Method of Labelling the graph}{5}{section.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}INPUTS}{6}{section.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Steps of Finding Maxiumum Partition}{7}{section.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Step I}{7}{subsection.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Step II}{8}{subsection.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}Step III}{8}{subsection.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.4}Step IV}{9}{subsection.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.5}Step V}{10}{subsection.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.6}Step VI}{10}{subsection.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Test Cases}{11}{section.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusion}{15}{chapter.84}
+\defcounter {refsection}{0}\relax 
+\vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Working Code in Python}{16}{appendix.85}
+\defcounter {refsection}{0}\relax 
+\vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{25}{dummy.425}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{25}{appendix*.426}

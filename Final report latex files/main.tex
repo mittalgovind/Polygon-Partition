@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis / Project Report
+% LaTeX Template
+% Version 2.0 (08/04/16)
+%
+% Author:
+% Siddhant Shrivastava
+% https://github.com/sidcode/bits-pilani-thesis-template-latex
+%
+% This template is heavily based on the work of Darshit Shah, Steven Gunn and Sunil Patel
+% Darshit Shah
+% https://github.com/darnir/BPHC-LaTeX-Report-Class
+% Steven Gunn
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper, oneside]{Thesis} % Paper size, default font size
+                                               % and one-sided paper
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\usepackage[backend=bibtex]{biblatex}
+\bibliography{Bibliography.bib}
+
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+\frontmatter % Use roman numbering style (i, ii...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define page headers using FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the
+                  %FancyHdr headers
+
+% Input all the variables used in the document. Please fill out the
+% variables.tex file with all your details.
+\input{variables}
+%-------------------------------------------------------------------------------
+%   NON-CONTENT PAGES
+%-------------------------------------------------------------------------------
+\maketitle
+%\Certificate
+% \Quotation{\ldots{} there is peaceful, \\\hspace{10mm} there is wild, \\ I am both at the same time.}{Govind Mittal}
+
+\begin{abstract}
+In this report, I review two algorithms used in partitioning rectilinear polygons, containing no holes in them. One has complexity of \textbf{O(kn)} and is used for partitioning the polygon into maximum number of non-overlapping rectangles and other has \textbf{O(nlogk)}, which is used for partitioning the polygon into the fewest number of non-overlapping rectangles, where n is the number of vertices in the polygon and k is a hyper parameter which is decided by the arrangements of vertices in the polygons. The algorithm is simulated and tested on various inputs.
+The major portion of the project is studied from the paper by San-Yuan Wu and Sartaj Sahni[1]. The algorithm is improvised and better implementation patterns have been generated.\\ 
+
+{\bf Keywords:} Rectilinear hole-free polygons, algorithm design, computational geometry\ldots
+\end{abstract}
+
+\begin{acknowledgements}
+I would like to express my deepest appreciation to Dr. Balram Dubey, Head of Department of \deptname{} at \univname{} for giving me an opportunity to enroll in \textbf{\doctype{} -- \ccode{}}. I express my special gratitude to my supervisor, \textbf{\supname{}} who gave me the golden opportunity to do this interesting project on the topic, '\ttitle{}' which also helped me in doing a lot of self-motivated research and resulted in expansion of my knowledge frontiers. With his feedbacks and patience in letting me choose my topic, the project would not have been what it is. \\
+Furthermore, I would also like to acknowledge with much appreciation the crucial role of my friends. Without their valuable feedbacks and discussions of the applications of crucial concepts in this field, the project would not have been done this well.\\
+
+%\null\vfill % Add some space to move the quote down the page a bit
+
+\begin{flushright}
+\authornames{}
+  
+\end{flushright}
+\end{acknowledgements}
+
+%-------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%-------------------------------------------------------------------------------
+
+% The page style headers have been "empty" all this time, now use the "fancy"
+% headers as defined before to bring them back
+\pagestyle{fancy}
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+% Set the left side page header to "List of Figures"
+\lhead{\emph{List of Figures}}
+\listoffigures % Write out the List of Figures
+
+ % Set the left side page header to "List of Tables"
+% \lhead{\emph{List of Tables}}
+% \listoftables % Write out the List of Tables
+
+
+
+%-------------------------------------------------------------------------------
+%	SYMBOLS
+%-------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+
+% \lhead{\emph{Glossary}} % Set the left side page header to "Symbols"
+
+%\listofnomenclature % List the nomenclature. (We use the glossaries package)
+
+
+%-------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%-------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/Chapter1}
+%\input{Chapters/Chapter2}
+%\input{Chapters/Chapter3}
+%\input{Chapters/Chapter4}
+%\input{Chapters/Chapter5}
+%\input{Chapters/Chapter6}
+%\input{Chapters/Chapter7}
+
+%-------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%-------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices
+% folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%-------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%-------------------------------------------------------------------------------
+\chapter{References}
+\label{References}
+
+\lhead{\emph{References}} % Change the page header to say "Bibliography"
+
+\begin{enumerate}
+	\item Wu, San-Yuan, and Sartaj Sahni. "Fast algorithms to partition simple rectilinear polygons." VLSI Design 1.3 (1994): 193-215.
+	\item  \href{http://networkx.github.io/}{Networkx Library(Accessed on: 23^{rd} March, 2017)}
+	\item \href{http://www.python.org/ }{Python(Accessed on: 23^{rd} March, 2017)}
+	\item \href{http://en.wikipedia.org/}{Wikipedia (Accessed on: 23^{rd} February, 2017)}
+	\item \href{https://github.com/mittalgovind/Polygon-Partition}{Author's Github Repository}
+\end{enumerate}
+\end{document}

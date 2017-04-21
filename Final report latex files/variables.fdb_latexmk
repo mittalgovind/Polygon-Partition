@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1492016919 "variables.tex" "variables.pdf" "variables" 1492016919
+  "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
+  "/usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf" 1463093894 31953 b9489e6e586f798610c60aec1f5ec548 ""
+  "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1492010093 3873397 d2a040524af03b8138700ece3be4ded7 ""
+  "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
+  "variables.aux" 1492016919 8 a94a2480d3289e625eea47cd1b285758 ""
+  "variables.tex" 1491975412 6074 f01f67ec5ca0da50687f379e11771382 ""
+  (generated)
+  "variables.pdf"
+  "variables.log"
